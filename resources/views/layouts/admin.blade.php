@@ -28,20 +28,21 @@
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
 </head>
 
 
 <body class="hold-transition sidebar-mini layout-fixed">
 
-
     <div class="wrapper">
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
+                width="60">
         </div>
 
         <!-- Navbar -->
@@ -49,7 +50,8 @@
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                            class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="index3.html" class="nav-link">Home</a>
@@ -84,8 +86,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('logout') }}"
-                        role="button" onclick="event.preventDefault();
+                    <a class="nav-link" href="{{ route('logout') }}" role="button"
+                        onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                         <i class="fa-solid fa-right-from-bracket"></i>
                         Log Out
@@ -100,13 +102,6 @@
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            {{-- <a href="index3.html" class="brand-link">
-                <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-                    style="opacity: .8">
-                <span class="brand-text font-weight-light">elibrary</span>
-            </a> --}}
-
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
@@ -123,8 +118,6 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-                         with font-awesome or any other icon font library -->
                         <li class="nav-item menu-open">
                             <a href="pages/widgets.html" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -135,10 +128,10 @@
                         </li>
                         <li class="nav-header">EXAMPLES</li>
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
+                            <a href="{{ url('home') }}" class="nav-link {{ request()->is('home') ? 'active' : '' }}">
+                                <i class="nav-icon fa-solid fa-house"></i>
                                 <p>
-                                    Gallery
+                                    Home
                                 </p>
                             </a>
                         </li>
@@ -146,69 +139,33 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    Pages
+                                    Data Master
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/examples/invoice.html" class="nav-link">
+                                    <a href="{{ url('catalog') }}" class="nav-link {{ request()->is('home') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Invoice</p>
+                                        <p>Catalogs</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/profile.html" class="nav-link">
+                                    <a href="{{ url('book') }}" class="nav-link {{ request()->is('book') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Profile</p>
+                                        <p>Books</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="pages/examples/e-commerce.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>E-commerce</p>
+                                        <p>Authors</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="pages/examples/projects.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Projects</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/project-add.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Project Add</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/project-edit.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Project Edit</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/project-detail.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Project Detail</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/contacts.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Contacts</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/faq.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>FAQ</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/contact-us.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Contact us</p>
+                                        <p>Publishers</p>
                                     </a>
                                 </li>
                             </ul>

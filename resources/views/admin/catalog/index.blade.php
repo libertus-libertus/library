@@ -1,7 +1,7 @@
 @extends('layouts.admin')
-@section('title', 'Dashboard')
+@section('title', 'Catalogs')
 @section('content')
     <div class="container-fluid">
-        WELCOME TO MY DASHBOARD
+        Yes
     </div>
 @endsection
