@@ -1,7 +1,7 @@
 @extends('layouts.admin')
-@section('title', 'Catalogs')
+@section('title', 'Books')
 @section('content')
     <div class="container-fluid">
-        <p>Ini halaman catalog</p>
+        <p>Ini halaman book</p>
     </div>
 @endsection
